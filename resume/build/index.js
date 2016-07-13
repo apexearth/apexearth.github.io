@@ -26624,8 +26624,7 @@ var Section = exports.Section = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { style: {
-                        marginTop: 20,
-                        marginBottom: 30
+                        paddingBottom: 22
                     } },
                 this.props.children
             );
@@ -26730,6 +26729,96 @@ var Line = exports.Line = function (_React$Component4) {
 }(_react2.default.Component);
 
 },{"react":196,"react-markdown":54}],200:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactMarkdown = require('react-markdown');
+
+var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
+
+var _TagList = require('./TagList');
+
+var _TagList2 = _interopRequireDefault(_TagList);
+
+var _CvParts = require('./CvParts');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Education = function (_React$Component) {
+    _inherits(Education, _React$Component);
+
+    function Education() {
+        _classCallCheck(this, Education);
+
+        return _possibleConstructorReturn(this, Object.getPrototypeOf(Education).apply(this, arguments));
+    }
+
+    _createClass(Education, [{
+        key: 'render',
+        value: function render() {
+            var education = this.props.cv.education.map(createEducation);
+            return _react2.default.createElement(
+                'div',
+                { style: {} },
+                education
+            );
+        }
+    }]);
+
+    return Education;
+}(_react2.default.Component);
+
+exports.default = Education;
+
+
+var educationIndex = 0;
+function createEducation(school) {
+    return _react2.default.createElement(
+        'div',
+        { key: educationIndex++,
+            style: { display: "flex", justifyContent: "space-between" } },
+        _react2.default.createElement(
+            'div',
+            { style: {
+                    fontSize: "18px", color: "#6a737c"
+                } },
+            school.name
+        ),
+        _react2.default.createElement(
+            'div',
+            { style: {
+                    fontSize: "14px"
+                } },
+            school.studies
+        ),
+        _react2.default.createElement(
+            'div',
+            { style: {
+                    fontSize: "14px"
+                } },
+            school.date.start,
+            ' - ',
+            school.date.end
+        )
+    );
+}
+
+},{"./CvParts":199,"./TagList":205,"react":196,"react-markdown":54}],201:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26884,7 +26973,7 @@ var styles = exports.styles = {
     }
 };
 
-},{"./CvParts":199,"./TagList":204,"react":196,"react-markdown":54}],201:[function(require,module,exports){
+},{"./CvParts":199,"./TagList":205,"react":196,"react-markdown":54}],202:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26965,7 +27054,7 @@ var styles = {
     }
 };
 
-},{"./Experience":200,"react":196}],202:[function(require,module,exports){
+},{"./Experience":201,"react":196}],203:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27072,7 +27161,7 @@ function iconStyle(imageUrl, size) {
     };
 }
 
-},{"react":196}],203:[function(require,module,exports){
+},{"react":196}],204:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27104,6 +27193,10 @@ var _TagList2 = _interopRequireDefault(_TagList);
 var _Experience = require('./Experience');
 
 var _Experience2 = _interopRequireDefault(_Experience);
+
+var _Education = require('./Education');
+
+var _Education2 = _interopRequireDefault(_Education);
 
 var _CvParts = require('./CvParts');
 
@@ -27182,6 +27275,16 @@ var Root = function (_React$Component) {
                         'EXPERIENCE'
                     ),
                     _react2.default.createElement(_Experience2.default, { cv: _cv2.default })
+                ),
+                _react2.default.createElement(
+                    _CvParts.Section,
+                    null,
+                    _react2.default.createElement(
+                        _CvParts.SectionHeader,
+                        null,
+                        'EDUCATION'
+                    ),
+                    _react2.default.createElement(_Education2.default, { cv: _cv2.default })
                 )
             );
         }
@@ -27194,20 +27297,20 @@ exports.default = Root;
 
 
 var rootStyle = {
-    margin: "auto auto",
+    margin: "0 auto",
     boxSizing: "border-box",
     backgroundColor: "#fff",
     color: "#3b4045",
     width: 960 + 'px',
-    paddingTop: 10,
-    paddingBottom: 20,
+    paddingTop: 20,
+    paddingBottom: 0,
     paddingLeft: 40,
     paddingRight: 40,
     fontSize: "14px",
     fontFamily: ["Arial", "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", "Helvetica", "Lucida Grande", "sans-serif"]
 };
 
-},{"./CvParts":199,"./Experience":200,"./Header":201,"./Info":202,"./TagList":204,"./cv.js":205,"react":196}],204:[function(require,module,exports){
+},{"./CvParts":199,"./Education":200,"./Experience":201,"./Header":202,"./Info":203,"./TagList":205,"./cv.js":206,"react":196}],205:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27287,7 +27390,7 @@ var styles = {
     }
 };
 
-},{"react":196}],205:[function(require,module,exports){
+},{"react":196}],206:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27342,12 +27445,13 @@ exports.default = {
         }]
     }],
     education: [{
-        school: "Tunxis Community College",
+        name: "Tunxis Community College",
+        studies: "Computer science studies focusing in software engineering.",
         date: { start: 2002, end: 2004 }
     }]
 };
 
-},{}],206:[function(require,module,exports){
+},{}],207:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -27366,4 +27470,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _reactDom2.default.render(_react2.default.createElement(_Root2.default, null), document.getElementById("root"));
 
-},{"./Root.js":203,"react":196,"react-dom":53}]},{},[206]);
+},{"./Root.js":204,"react":196,"react-dom":53}]},{},[207]);

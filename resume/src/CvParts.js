@@ -5,8 +5,7 @@ export class Section extends React.Component {
     render() {
         return (
             <div style={{
-                marginTop: 20,
-                marginBottom: 30
+                paddingBottom: 22
             }}>
                 {this.props.children}
             </div>

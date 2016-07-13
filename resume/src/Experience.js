@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import TagList from './TagList'
-import {Line, Statement} from './CvParts'
+import {Statement} from './CvParts'
 
 export default class Experience extends React.Component {
     render() {

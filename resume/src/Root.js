@@ -4,6 +4,7 @@ import Header from './Header'
 import Info from './Info'
 import TagList from './TagList'
 import Experience from './Experience'
+import Education from './Education'
 import {
     Statement,
     Section,
@@ -39,19 +40,23 @@ export default class Root extends React.Component {
                     <SectionHeader>EXPERIENCE</SectionHeader>
                     <Experience cv={cv}/>
                 </Section>
+                <Section>
+                    <SectionHeader>EDUCATION</SectionHeader>
+                    <Education cv={cv}/>
+                </Section>
             </div>
         )
     }
 }
 
 var rootStyle = {
-    margin:          "auto auto",
+    margin:          "0 auto",
     boxSizing:       "border-box",
     backgroundColor: "#fff",
     color:           "#3b4045",
     width:           960 + 'px',
-    paddingTop:      10,
-    paddingBottom:   20,
+    paddingTop:      20,
+    paddingBottom:   0,
     paddingLeft:     40,
     paddingRight:    40,
     fontSize:        "14px",

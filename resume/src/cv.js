@@ -162,7 +162,8 @@ export default {
         }
     ],
     education:    [{
-        school: "Tunxis Community College",
+        name: "Tunxis Community College",
+        studies: "Computer science studies focusing in software engineering.",
         date:   {start: 2002, end: 2004}
     }]
 };
