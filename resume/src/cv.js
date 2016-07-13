@@ -84,7 +84,7 @@ export default {
                     description: [
                                      "### Selected Achievements:",
                                      "- Spearheaded design and development of enterprise test solutions for next-generation NVMe SSD products.",
-                                     "    - Praised for improving tester hardware & software reliability from ~71% to 99.8%.",
+                                     "    - Praised for improving tester hardware & software reliability from ~70% to 99.8%.",
                                      "    - Through hands-on effort, worked closely with team members and technology experts to hunt down and eliminate long-standing issues.",
                                      "    - Worked closely other NPI team members to quickly adapt to rapid changes, ensuring our team would stay clear of the critical path.",
                                      "        - Forward-looking design through integration, automation, and high maintainability.",

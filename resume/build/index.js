@@ -26954,9 +26954,7 @@ var Header = function (_React$Component) {
 exports.default = Header;
 
 var styles = {
-    root: {
-        float: "left"
-    },
+    root: {},
     name: {
         fontSize: "45px",
         fontWeight: "bold"
@@ -27042,7 +27040,8 @@ function createInfo(content, imageStyle) {
 
 var styles = {
     root: {
-        fontSize: "16px"
+        fontSize: "16px",
+        width: "350px"
     },
     contentStyle: {
         lineHeight: "30px",
@@ -27138,14 +27137,10 @@ var Root = function (_React$Component) {
                         'div',
                         { style: {
                                 display: "flex",
-                                justifyContent: "space-between"
+                                justifyContent: "space-between",
+                                whiteSpace: "nowrap"
                             } },
-                        _react2.default.createElement(_Header2.default, { cv: _cv2.default, style: {
-                                position: "relative",
-                                right: 0,
-                                top: 0,
-                                width: 350
-                            } }),
+                        _react2.default.createElement(_Header2.default, { cv: _cv2.default }),
                         _react2.default.createElement(_Info2.default, { cv: _cv2.default })
                     )
                 ),
@@ -27203,7 +27198,7 @@ var rootStyle = {
     boxSizing: "border-box",
     backgroundColor: "#fff",
     color: "#3b4045",
-    width: 960,
+    width: 960 + 'px',
     paddingTop: 10,
     paddingBottom: 20,
     paddingLeft: 40,
@@ -27324,7 +27319,7 @@ exports.default = {
             date: { start: "June 2015", end: "current" },
             tags: ["javascript", "sql-server", "c#", "python", "node.js", "mocha", "asp.net", "entity-framework", "web-api", "rest", "lua", "linux", "bash", "git"],
             statement: ["Hands-on leadership of the manufacturing test software team, responsible for manufacturing test of SATA & NVMe SSDs.", "Work directly with product designers to gather enterprise level testing requirements for cutting-edge technologies.", "Architect advanced software, systems, and networking solutions to meet manufacturing test requirements."].join(" \n"),
-            description: ["### Selected Achievements:", "- Spearheaded design and development of enterprise test solutions for next-generation NVMe SSD products.", "    - Praised for improving tester hardware & software reliability from ~71% to 99.8%.", "    - Through hands-on effort, worked closely with team members and technology experts to hunt down and eliminate long-standing issues.", "    - Worked closely other NPI team members to quickly adapt to rapid changes, ensuring our team would stay clear of the critical path.", "        - Forward-looking design through integration, automation, and high maintainability.", "    - Key contributor to coordinating, data mining, and improving the quality of RDT efforts.", "    - Worked with manufacturers to refine and provide optimal testing solutions.", "- Overhauled the software release management process by adding peer code reviews, documentation, and automating release deployments.", "    - Setup a GitLab server to manage builds, releases and issues.", "    - Oversaw the completion of dozens of releases and hundreds of issues.", "    - Drove initiatives to automate builds and releases wherever appropriate, increase the overall efficiency of the team."].join(" \n")
+            description: ["### Selected Achievements:", "- Spearheaded design and development of enterprise test solutions for next-generation NVMe SSD products.", "    - Praised for improving tester hardware & software reliability from ~70% to 99.8%.", "    - Through hands-on effort, worked closely with team members and technology experts to hunt down and eliminate long-standing issues.", "    - Worked closely other NPI team members to quickly adapt to rapid changes, ensuring our team would stay clear of the critical path.", "        - Forward-looking design through integration, automation, and high maintainability.", "    - Key contributor to coordinating, data mining, and improving the quality of RDT efforts.", "    - Worked with manufacturers to refine and provide optimal testing solutions.", "- Overhauled the software release management process by adding peer code reviews, documentation, and automating release deployments.", "    - Setup a GitLab server to manage builds, releases and issues.", "    - Oversaw the completion of dozens of releases and hundreds of issues.", "    - Drove initiatives to automate builds and releases wherever appropriate, increase the overall efficiency of the team."].join(" \n")
         }]
     }, {
         companyTitle: "OCZ Storage Solutions",
