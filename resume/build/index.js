@@ -27437,7 +27437,7 @@ exports.default = {
             location: "Wallingford, CT",
             date: { start: 2004, end: 2006 },
             tags: [".net", "windows-server", "sql-server", "networking", "telephony", "dns", "dhcp"],
-            description: ["- Setup & administration of Windows 2003 Servers, DNS, DHCP, SQL Server, Networking and Telephony.", "- Wrote reports to view real-time statistics during auctions using SQL Server and ASP.NET.", "- Provided technical support, especially during time-critical auctions."].join("\n")
+            description: ["Started as an intern, was responsible for supporting user-systems, server systems, live auction systems. Offered additional help in software for creating real time reports to display live auction statistics.   \n", "- Setup & administration of Windows 2003 Servers, DNS, DHCP, SQL Server, Networking and Telephony.", "- Wrote reports to view real-time statistics during auctions using SQL Server and ASP.NET.", "- Provided technical support, especially during time-critical auctions.   \n", "Note: Also ran email marketing where I designed many ads in photoshop which were reviewed and approved by the CEO."].join(" \n")
         }]
     }],
     education: [{
