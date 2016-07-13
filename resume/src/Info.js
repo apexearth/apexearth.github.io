@@ -2,7 +2,7 @@ import React from 'react'
 export default class Info extends React.Component {
     constructor(props) {
         super()
-        this.style = Object.assign({}, props.stylez)
+        this.style = props.style
     }
 
     render() {
@@ -11,7 +11,7 @@ export default class Info extends React.Component {
             <div style={this.style}>
                 {createInfo(info.Location, styles.location)}
                 {createInfo(info.Email, styles.email)}
-                {createInfo(info.Phone, styles.phone)}
+                {createInfo(info.CV, styles.cv)}
                 {createInfo(info.LinkedIn, styles.linkedIn)}
                 {createInfo(info.StackOverflow, styles.stackOverflow)}
                 {createInfo(info.GitHub, styles.gitHub)}
@@ -40,6 +40,7 @@ var styles = {
     location:      iconStyle("i/location.png"),
     email:         iconStyle("i/email.png", 23),
     phone:         iconStyle("i/phone.png"),
+    cv:            iconStyle("i/cv.png", 23),
     linkedIn:      iconStyle("i/linkedIn.png", 20),
     stackOverflow: iconStyle("i/stackOverflow.png", 30),
     gitHub:        iconStyle("i/gitHub.svg", 28)

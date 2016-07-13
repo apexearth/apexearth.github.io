@@ -7,6 +7,7 @@ export default {
         Location:      "San Jose, CA",
         Email:         "apexearth@gmail.com",
         Phone:         "(860) 301-4287",
+        CV:            "https://apexearth.github.io/resume",
         LinkedIn:      "https://www.linkedin.com/in/apexearth",
         GitHub:        "https://github.com/apexearth",
         StackOverflow: "https://stackoverflow.com/cv/chris.jacobs",

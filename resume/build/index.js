@@ -26996,7 +26996,7 @@ var Info = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Info).call(this));
 
-        _this.style = Object.assign({}, props.stylez);
+        _this.style = props.style;
         return _this;
     }
 
@@ -27009,7 +27009,7 @@ var Info = function (_React$Component) {
                 { style: this.style },
                 createInfo(info.Location, styles.location),
                 createInfo(info.Email, styles.email),
-                createInfo(info.Phone, styles.phone),
+                createInfo(info.CV, styles.cv),
                 createInfo(info.LinkedIn, styles.linkedIn),
                 createInfo(info.StackOverflow, styles.stackOverflow),
                 createInfo(info.GitHub, styles.gitHub)
@@ -27051,6 +27051,7 @@ var styles = {
     location: iconStyle("i/location.png"),
     email: iconStyle("i/email.png", 23),
     phone: iconStyle("i/phone.png"),
+    cv: iconStyle("i/cv.png", 23),
     linkedIn: iconStyle("i/linkedIn.png", 20),
     stackOverflow: iconStyle("i/stackOverflow.png", 30),
     gitHub: iconStyle("i/gitHub.svg", 28)
@@ -27306,6 +27307,7 @@ exports.default = {
         Location: "San Jose, CA",
         Email: "apexearth@gmail.com",
         Phone: "(860) 301-4287",
+        CV: "https://apexearth.github.io/resume",
         LinkedIn: "https://www.linkedin.com/in/apexearth",
         GitHub: "https://github.com/apexearth",
         StackOverflow: "https://stackoverflow.com/cv/chris.jacobs",
