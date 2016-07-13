@@ -16,14 +16,13 @@ export default class Header extends React.Component {
 }
 var styles = {
     root:  {
-        float: "left"
     },
     name:  {
         fontSize:   "45px",
         fontWeight: "bold"
     },
     title: {
-        fontSize: "30px",
+        fontSize:     "30px",
         marginBottom: 15
     }
 }

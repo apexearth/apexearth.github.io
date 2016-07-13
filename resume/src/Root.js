@@ -17,14 +17,10 @@ export default class Root extends React.Component {
                 <Section>
                     <div style={{
                         display: "flex",
-                        justifyContent: "space-between"
+                        justifyContent: "space-between",
+                        whiteSpace: "nowrap"
                     }}>
-                        <Header cv={cv} style={{
-                        position: "relative",
-                        right: 0,
-                        top: 0,
-                        width: 350
-                    }}/>
+                        <Header cv={cv}/>
                         <Info cv={cv}/>
                     </div>
                 </Section>
@@ -53,7 +49,7 @@ var rootStyle = {
     boxSizing:       "border-box",
     backgroundColor: "#fff",
     color:           "#3b4045",
-    width:           960,
+    width:           960 + 'px',
     paddingTop:      10,
     paddingBottom:   20,
     paddingLeft:     40,

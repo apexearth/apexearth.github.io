@@ -31,7 +31,8 @@ function createInfo(content, imageStyle) {
 
 var styles = {
     root:          {
-        fontSize: "16px"
+        fontSize: "16px",
+        width:    "350px"
     },
     contentStyle:  {
         lineHeight:   "30px",
