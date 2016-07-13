@@ -42,7 +42,7 @@ function createPosition(company, position) {
             </div>
 
     var tagList = position.tags
-        ? <div style={{marginTop: -10}}><TagList tags={position.tags}/></div>
+        ? <div style={{paddingTop: 5, paddingBottom: 5}}><TagList tags={position.tags}/></div>
         : null
 
     var statement =
@@ -59,7 +59,7 @@ function createPosition(company, position) {
         <div key={positionIndex++} style={{marginBottom: 15}}>
             {positionTitle}
             {companyTitle}
-            <p>{tagList}</p>
+            {tagList}
             {position.statement ? statement : null}
             {description}
         </div>

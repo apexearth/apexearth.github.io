@@ -26924,7 +26924,7 @@ function createPosition(company, position) {
 
     var tagList = position.tags ? _react2.default.createElement(
         'div',
-        { style: { marginTop: -10 } },
+        { style: { paddingTop: 5, paddingBottom: 5 } },
         _react2.default.createElement(_TagList2.default, { tags: position.tags })
     ) : null;
 
@@ -26949,11 +26949,7 @@ function createPosition(company, position) {
         { key: positionIndex++, style: { marginBottom: 15 } },
         positionTitle,
         companyTitle,
-        _react2.default.createElement(
-            'p',
-            null,
-            tagList
-        ),
+        tagList,
         position.statement ? statement : null,
         description
     );
