@@ -33,6 +33,7 @@ var styles = {
         marginTop:              6,
         marginBotom:            6,
         marginRight:            6,
-        whiteSpace:             "nowrap"
+        whiteSpace:             "nowrap",
+        WebkitPrintColorAdjust: "exact",
     }
 }

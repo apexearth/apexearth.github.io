@@ -40,7 +40,8 @@ export class Statement extends React.Component {
                 paddingBottom: 5,
                 paddingLeft: 20,
                 paddingRight: 20,
-                border: "solid 1px #f1f8ff",
+                border: "solid 1px #dae7f1",
+                WebkitPrintColorAdjust: "exact",
             }}>
                 <ReactMarkdown source={this.props.children}/>
             </div>

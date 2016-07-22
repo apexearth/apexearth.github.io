@@ -19,7 +19,8 @@ export default class Root extends React.Component {
                     <div style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        whiteSpace: "nowrap"
+                        alignItems: "center",
+                        whiteSpace: "nowrap",
                     }}>
                         <Header cv={cv}/>
                         <Info cv={cv}/>
