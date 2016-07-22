@@ -1,0 +1,14 @@
+{
+  "name": "educational",
+  "version": "1.0.0",
+  "description": "",
+  "main": "binarySearch-Spec.js",
+  "scripts": {
+    "test": "mocha *-Spec.js"
+  },
+  "author": "cjacobs",
+  "license": "ISC",
+  "devDependencies": {
+    "should": "^9.0.2"
+  }
+}
