@@ -1,9 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
 import Root from './Root.js'
 import cv from './cv'
 
-ReactDOM.render(<Root />, document.getElementById("root"));
+ReactDOM.render((
+    <Router history={browserHistory}>
+        <Route path='/' component={Root} />
+    </Router>
+), document.getElementById("root"));
 
 if (cv.highlights && cv.highlights.length) {
     for (var i = 0; i < cv.highlights.length; i++) {

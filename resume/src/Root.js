@@ -13,6 +13,8 @@ import {
 
 export default class Root extends React.Component {
     render() {
+        var short = this.props.location.query.short !== undefined
+        var content = cv(!short)
         return (
             <div style={rootStyle}>
                 <Section>
@@ -22,28 +24,28 @@ export default class Root extends React.Component {
                         alignItems: "center",
                         whiteSpace: "nowrap",
                     }}>
-                        <Header cv={cv}/>
-                        <Info cv={cv}/>
+                        <Header cv={content}/>
+                        <Info cv={content}/>
                     </div>
                 </Section>
                 <Section>
-                    <Statement>{cv.statement}</Statement>
+                    <Statement>{content.statement}</Statement>
                 </Section>
                 <Section>
                     <SectionHeader>SKILLS</SectionHeader>
-                    <TagList tags={cv.skills}/>
+                    <TagList tags={content.skills}/>
                 </Section>
                 <Section>
                     <SectionHeader>TECHNOLOGY</SectionHeader>
-                    <TagList tags={cv.technologies}/>
+                    <TagList tags={content.technologies}/>
                 </Section>
                 <Section>
                     <SectionHeader>EXPERIENCE</SectionHeader>
-                    <Experience cv={cv}/>
+                    <Experience cv={content}/>
                 </Section>
                 <Section>
                     <SectionHeader>EDUCATION</SectionHeader>
-                    <Education cv={cv}/>
+                    <Education cv={content}/>
                 </Section>
             </div>
         )
