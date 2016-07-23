@@ -32859,7 +32859,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(
     _reactRouter.Router,
     { history: _reactRouter.browserHistory },
-    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Root2.default })
+    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Root2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: '/resume/', component: _Root2.default })
 ), document.getElementById("root"));
 
 if (_cv2.default.highlights && _cv2.default.highlights.length) {

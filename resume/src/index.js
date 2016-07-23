@@ -7,6 +7,7 @@ import cv from './cv'
 ReactDOM.render((
     <Router history={browserHistory}>
         <Route path='/' component={Root} />
+        <Route path='/resume/' component={Root} />
     </Router>
 ), document.getElementById("root"));
 
