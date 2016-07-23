@@ -31,7 +31,6 @@ var styles = {
         paddingRight:           5,
         border:                 "solid 1px #dae7f1",
         marginTop:              6,
-        marginBotom:            6,
         marginRight:            6,
         whiteSpace:             "nowrap",
         WebkitPrintColorAdjust: "exact",

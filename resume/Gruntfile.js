@@ -40,7 +40,7 @@ module.exports = function (grunt) {
                     hostname:   '*',
                     livereload: true,
                     open:       {
-                        target: "http://localhost:8000/index.html"
+                        target: "http://localhost:8000/"
                     }
                 }
             }

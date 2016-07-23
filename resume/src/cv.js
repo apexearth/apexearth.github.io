@@ -1,5 +1,6 @@
 export default function (long) {
-    long = long || null;
+    long = long || null; // if long == true, give the long version of the cv.
+
     return {
         Header:       {
             Name:  "Christopher Jacobs",
@@ -13,7 +14,7 @@ export default function (long) {
             LinkedIn:      "https://www.linkedin.com/in/apexearth",
             GitHub:        "https://github.com/apexearth",
             StackOverflow: "https://stackoverflow.com/cv/chris.jacobs",
-            "MCP#":        "11821392"
+            MCP:           "11821392"
         },
         highlights:   [
             "javascript", "JavaScript", "node.js", "Node.js",
@@ -75,7 +76,7 @@ export default function (long) {
             "css",
             "c++",
             "java",
-            "windows erver",
+            "windows server",
             "linux",
             "bash",
             "bootstrap"
@@ -172,7 +173,7 @@ export default function (long) {
                                      ].filter(x=>x).join(" \n"),
                         description: [
                                          "### Notable Projects:",
-                                         "- Led development, launch, and maintenance of website for documentation and tracking of product repair actions and results. Teamed with BI Analysts to create SQL queries for repair data analysis.",
+                                         "- Led development, launch, and maintenance of web application for documentation and tracking of product repair actions and results. Teamed with BI Analysts to create SQL queries for repair data analysis.",
                                          "    - Produced 15% increase in throughput and provided critical data and business intelligence for decision-makers.",
                                          long && "- Designed, developed, and integrated Materials Planning System with Sage ERP; enabled automated management of testing, manufacturing, and logistics processes for memory products. Fueled impressive 75% increase in processing efficiency.",
                                          "- Full lifecycle development of web application for administration of RMA transactions.",
@@ -200,7 +201,7 @@ export default function (long) {
                                      ].filter(x=>x).join(" \n")
                     }
                 ]
-            }
+            },
         ],
         education:    [{
             name:    "Tunxis Community College",

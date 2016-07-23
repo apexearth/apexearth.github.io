@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import TagList from './TagList'
-import {Statement} from './CvParts'
+import {Statement, Line} from './CvParts'
 
 export default class Experience extends React.Component {
     render() {
@@ -28,7 +28,8 @@ function createPosition(company, position) {
     var positionTitle =
             <div style={styles.container}>
                 <div style={styles.positionTitle}>{position.title}</div>
-                <div style={{whiteSpace: "nowrap", fontSize: "12px", fontWeight: "bold"}}>
+                <Line height="2" />
+                <div style={{whiteSpace: "nowrap", fontSize: "12px", fontWeight: "bold", marginLeft: 15}}>
                     {position.date.start} - {position.date.end}
                 </div>
             </div>
@@ -68,7 +69,7 @@ function createPosition(company, position) {
 
 export var styles = {
     positionTitle: {
-        fontSize: "18px", whiteSpace: "nowrap", fontWeight: "bold", marginTop: 10
+        fontSize: "18px", whiteSpace: "nowrap", fontWeight: "bold", marginRight: 15
     },
     companyTitle:  {
         fontSize: "18px", color: "#6a737c", fontWeight: "normal"

@@ -31963,7 +31963,7 @@ var Section = exports.Section = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { style: {
-                        paddingBottom: 22
+                        marginBottom: 22
                     } },
                 this.props.children
             );
@@ -31992,15 +31992,20 @@ var SectionHeader = exports.SectionHeader = function (_React$Component2) {
                         alignItems: "center",
                         fontSize: "15px",
                         fontWeight: "bold",
-                        color: "#f48024",
-                        marginBottom: 5
+                        color: "#ee701d",
+                        backgroundColor: "#efefef",
+                        paddingLeft: 5,
+                        paddingTop: 5,
+                        paddingBottom: 2,
+                        borderBottom: "solid 3px #e5e5e5",
+                        marginBottom: 5,
+                        WebkitPrintColorAdjust: "exact"
                     } },
                 _react2.default.createElement(
                     'span',
-                    null,
+                    { style: { marginRight: 15 } },
                     this.props.children
-                ),
-                _react2.default.createElement(Line, null)
+                )
             );
         }
     }]);
@@ -32024,8 +32029,7 @@ var Statement = exports.Statement = function (_React$Component3) {
                 'div',
                 { style: {
                         backgroundColor: "#f1f8ff",
-                        paddingTop: 5,
-                        paddingBottom: 5,
+                        marginTop: 10,
                         paddingLeft: 20,
                         paddingRight: 20,
                         border: "solid 1px #dae7f1",
@@ -32054,8 +32058,7 @@ var Line = exports.Line = function (_React$Component4) {
             var style = {
                 height: 0,
                 width: "100%",
-                borderTop: (this.props.height || 1) + "px solid #ccc",
-                marginLeft: 15
+                borderTop: (this.props.height || 1) + "px solid #ccc"
             };
             return _react2.default.createElement(
                 'div',
@@ -32238,9 +32241,10 @@ function createPosition(company, position) {
             { style: styles.positionTitle },
             position.title
         ),
+        _react2.default.createElement(_CvParts.Line, { height: '2' }),
         _react2.default.createElement(
             'div',
-            { style: { whiteSpace: "nowrap", fontSize: "12px", fontWeight: "bold" } },
+            { style: { whiteSpace: "nowrap", fontSize: "12px", fontWeight: "bold", marginLeft: 15 } },
             position.date.start,
             ' - ',
             position.date.end
@@ -32297,7 +32301,7 @@ function createPosition(company, position) {
 
 var styles = exports.styles = {
     positionTitle: {
-        fontSize: "18px", whiteSpace: "nowrap", fontWeight: "bold", marginTop: 10
+        fontSize: "18px", whiteSpace: "nowrap", fontWeight: "bold", marginRight: 15
     },
     companyTitle: {
         fontSize: "18px", color: "#6a737c", fontWeight: "normal"
@@ -32580,6 +32584,11 @@ var Root = function (_React$Component) {
                     _CvParts.Section,
                     null,
                     _react2.default.createElement(
+                        _CvParts.SectionHeader,
+                        null,
+                        'SUMMARY'
+                    ),
+                    _react2.default.createElement(
                         _CvParts.Statement,
                         null,
                         content.statement
@@ -32723,7 +32732,6 @@ var styles = {
         paddingRight: 5,
         border: "solid 1px #dae7f1",
         marginTop: 6,
-        marginBotom: 6,
         marginRight: 6,
         whiteSpace: "nowrap",
         WebkitPrintColorAdjust: "exact"
@@ -32738,7 +32746,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function (long) {
-    long = long || null;
+    long = long || null; // if long == true, give the long version of the cv.
+
     return {
         Header: {
             Name: "Christopher Jacobs",
@@ -32752,14 +32761,14 @@ exports.default = function (long) {
             LinkedIn: "https://www.linkedin.com/in/apexearth",
             GitHub: "https://github.com/apexearth",
             StackOverflow: "https://stackoverflow.com/cv/chris.jacobs",
-            "MCP#": "11821392"
+            MCP: "11821392"
         },
         highlights: ["javascript", "JavaScript", "node.js", "Node.js", "c#", "C#", "java", "Java", "python", "Python", "tdd", "unit testing", "test automation", "Full Stack Development", "Test/Build/Release Automation", "rest", "REST web services", "gulp", "gruntjs", "high performance", "SQL Server", "SQL", "sql"],
         statement: ["Over 10 years of success driving full lifecycle development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.", "- Proven JavaScript, C#, and SQL expert with ‘multi-hat’ qualifications and advanced skills honed in Full Stack Development, Relational Database Design, Object Oriented Programming, Testing, and Automation.", "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable high performance enterprise solutions that yield measurable results in efficiency, productivity, and bottom line profits.", "- Excel at driving on time, within budget delivery of software projects from conception to successful conclusion in fast-paced, deadline-driven environments.", "- Respected as an energetic and motivational leader with talent for mentoring and coaching teams to new levels of performance.", "- Technologically savvy professional who thrives on challenges, rapidly adapts to new environments, and remains abreast of new and emerging technologies, and best practices."].filter(function (x) {
             return x;
         }).join(" \n"),
         skills: ["Web Application Development", "Full Stack Development", "Software/Systems Engineering", "Software Architecture", "Relational Database Design", "Software Testing & Integration", "Development Lifecycle", "Agile/Scrum Methodology", "Requirements Gathering/Analysis", "Enterprise/Solutions Architecture", "Front-/Back-End Development", "High Performance Coding", "Object Oriented Programming", "Cloud Integration", "Debugging, Defect Tracking", "Test Automation"],
-        technologies: ["javascript", "sql", "c#", "python", "node.js", "rest", "reactjs", "angularjs", "tdd", "unit testing", "test automation", "jasmine", "mocha", "gulp", "gruntjs", "git", "mercurial", "asp.net", "entity framework", "web api", "mvc", "lua", "html", "css", "c++", "java", "windows erver", "linux", "bash", "bootstrap"],
+        technologies: ["javascript", "sql", "c#", "python", "node.js", "rest", "reactjs", "angularjs", "tdd", "unit testing", "test automation", "jasmine", "mocha", "gulp", "gruntjs", "git", "mercurial", "asp.net", "entity framework", "web api", "mvc", "lua", "html", "css", "c++", "java", "windows server", "linux", "bash", "bootstrap"],
         experience: [{
             companyTitle: "Toshiba America Electronics Corporation",
             positions: [{
@@ -32798,7 +32807,7 @@ exports.default = function (long) {
                 statement: ["Initially hired as Software Developer; assumed additional responsibilities of System Administrator, effectively fulfilling dual roles for nearly 2 years to accommodate challenging business needs during period of rapid corporate growth and expansion."].filter(function (x) {
                     return x;
                 }).join(" \n"),
-                description: ["### Notable Projects:", "- Led development, launch, and maintenance of website for documentation and tracking of product repair actions and results. Teamed with BI Analysts to create SQL queries for repair data analysis.", "    - Produced 15% increase in throughput and provided critical data and business intelligence for decision-makers.", long && "- Designed, developed, and integrated Materials Planning System with Sage ERP; enabled automated management of testing, manufacturing, and logistics processes for memory products. Fueled impressive 75% increase in processing efficiency.", "- Full lifecycle development of web application for administration of RMA transactions.", "    - Led to dramatic increase in transaction accuracy and ~60% decrease in RMA processing time.", long && "- Leveraged deep understanding and earlier hands-on experience in Windows Server maintenance and networking best practices to intuitively tailor software development and deployment plans that consistently produce highest possible levels of performance, compatibility, and functionality.", long && "- Designed and developed customized client-server reporting system generating dozens of reports vital to core business functions company-wide.", long && "- Developed and maintained a suite of many ERP-integrated applications supporting global operations, increasing the efficiency of day-to-day actions in all facets of the company."].filter(function (x) {
+                description: ["### Notable Projects:", "- Led development, launch, and maintenance of web application for documentation and tracking of product repair actions and results. Teamed with BI Analysts to create SQL queries for repair data analysis.", "    - Produced 15% increase in throughput and provided critical data and business intelligence for decision-makers.", long && "- Designed, developed, and integrated Materials Planning System with Sage ERP; enabled automated management of testing, manufacturing, and logistics processes for memory products. Fueled impressive 75% increase in processing efficiency.", "- Full lifecycle development of web application for administration of RMA transactions.", "    - Led to dramatic increase in transaction accuracy and ~60% decrease in RMA processing time.", long && "- Leveraged deep understanding and earlier hands-on experience in Windows Server maintenance and networking best practices to intuitively tailor software development and deployment plans that consistently produce highest possible levels of performance, compatibility, and functionality.", long && "- Designed and developed customized client-server reporting system generating dozens of reports vital to core business functions company-wide.", long && "- Developed and maintained a suite of many ERP-integrated applications supporting global operations, increasing the efficiency of day-to-day actions in all facets of the company."].filter(function (x) {
                     return x;
                 }).join(" \n")
             }]

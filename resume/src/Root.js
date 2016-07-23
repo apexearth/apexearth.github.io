@@ -29,6 +29,7 @@ export default class Root extends React.Component {
                     </div>
                 </Section>
                 <Section>
+                    <SectionHeader>SUMMARY</SectionHeader>
                     <Statement>{content.statement}</Statement>
                 </Section>
                 <Section>
