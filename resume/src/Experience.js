@@ -43,24 +43,28 @@ function createPosition(company, position) {
             </div>
 
     var tagList = position.tags
-        ? <div style={{paddingTop: 5, paddingBottom: 5}}><TagList tags={position.tags}/></div>
+        ? <div style={{pageBreakInside: "avoid", paddingTop: 5, paddingBottom: 5}}><TagList tags={position.tags}/></div>
         : null
 
     var statement =
-            <div>
+            <div style={{pageBreakInside: "avoid"}}>
                 <Statement>{position.statement}</Statement>
             </div>
 
     var description =
-            <div>
+            <div style={{pageBreakInside: "avoid"}}>
                 <ReactMarkdown source={position.description}/>
             </div>
 
     return (
-        <div key={positionIndex++} style={{marginBottom: 15}}>
-            {positionTitle}
-            {companyTitle}
-            {tagList}
+        <div key={positionIndex++} style={{
+            marginBottom: 15,
+        }}>
+            <div style={{pageBreakInside: "avoid"}}>
+                {positionTitle}
+                {companyTitle}
+                {tagList}
+            </div>
             {position.statement ? statement : null}
             {description}
         </div>

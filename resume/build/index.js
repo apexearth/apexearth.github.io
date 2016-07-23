@@ -32268,13 +32268,13 @@ function createPosition(company, position) {
 
     var tagList = position.tags ? _react2.default.createElement(
         'div',
-        { style: { paddingTop: 5, paddingBottom: 5 } },
+        { style: { pageBreakInside: "avoid", paddingTop: 5, paddingBottom: 5 } },
         _react2.default.createElement(_TagList2.default, { tags: position.tags })
     ) : null;
 
     var statement = _react2.default.createElement(
         'div',
-        null,
+        { style: { pageBreakInside: "avoid" } },
         _react2.default.createElement(
             _CvParts.Statement,
             null,
@@ -32284,16 +32284,22 @@ function createPosition(company, position) {
 
     var description = _react2.default.createElement(
         'div',
-        null,
+        { style: { pageBreakInside: "avoid" } },
         _react2.default.createElement(_reactMarkdown2.default, { source: position.description })
     );
 
     return _react2.default.createElement(
         'div',
-        { key: positionIndex++, style: { marginBottom: 15 } },
-        positionTitle,
-        companyTitle,
-        tagList,
+        { key: positionIndex++, style: {
+                marginBottom: 15
+            } },
+        _react2.default.createElement(
+            'div',
+            { style: { pageBreakInside: "avoid" } },
+            positionTitle,
+            companyTitle,
+            tagList
+        ),
         position.statement ? statement : null,
         description
     );
