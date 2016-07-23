@@ -32208,7 +32208,7 @@ var Experience = function (_React$Component) {
             var experience = this.props.cv.experience.map(createCompany);
             return _react2.default.createElement(
                 'div',
-                { style: {} },
+                { style: { marginTop: 10 } },
                 experience
             );
         }

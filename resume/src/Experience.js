@@ -7,7 +7,7 @@ export default class Experience extends React.Component {
     render() {
         var experience = this.props.cv.experience.map(createCompany)
         return (
-            <div style={{}}>
+            <div style={{marginTop: 10}}>
                 {experience}
             </div>
         )
@@ -28,7 +28,7 @@ function createPosition(company, position) {
     var positionTitle =
             <div style={styles.container}>
                 <div style={styles.positionTitle}>{position.title}</div>
-                <Line height="2" />
+                <Line height="2"/>
                 <div style={{whiteSpace: "nowrap", fontSize: "12px", fontWeight: "bold", marginLeft: 15}}>
                     {position.date.start} - {position.date.end}
                 </div>
