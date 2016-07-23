@@ -32651,7 +32651,7 @@ var rootStyle = {
     color: "#3b4045",
     width: 960 + 'px',
     paddingTop: 20,
-    paddingBottom: 0,
+    paddingBottom: 20,
     paddingLeft: 40,
     paddingRight: 40,
     fontSize: "14px",
