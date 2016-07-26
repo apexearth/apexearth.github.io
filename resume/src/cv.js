@@ -110,7 +110,7 @@ export default function (long) {
                                          "    - Key contributor to coordinating, data mining, and improving the quality of RDT efforts.",
                                          "    - Worked with manufacturers to refine and provide optimal testing solutions.",
                                          "- Overhauled the software development & release management processes by adding peer code reviews, documentation, and automating release deployments.",
-                                         "    - Instituted the usage GitLab to manage & automate builds, testing, releases and issues.",
+                                         "    - Instituted the usage of GitLab to manage & automate builds, testing, releases and issues.",
                                          "    - Oversaw the completion of dozens of releases and hundreds of issues.",
                                          "    - Drove initiatives to automate builds and releases wherever appropriate, increase the overall efficiency of the team.",
                                          "    - Added unit-testing requirements for all written software, improving software quality and maintainability.",
