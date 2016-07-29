@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Christopher Jacobs</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        a, a:active {
+            color: #376d95;
+        }
+    </style>
+</head>
+<body>
+<div id="root"></div>
+<script src="scripts/ie-shims.js"></script>
+<script src="src/cv.js"></script>
+<script>
+    var resume = cv(true)
+
+    document.write("<pre>")
+    dump(resume)
+    document.write("</pre>")
+
+    function dump(obj) {
+        for (var key in obj) {
+            if (!obj.hasOwnProperty(key)) continue
+            if (["highlights"].indexOf(key) > -1) continue
+            var o = obj[key]
+            if (typeof o === "object") {
+                if (isNaN(Number(key)))
+                    document.write(title(key) + ":<div style='margin-left: 15px'>")
+                dump(o)
+                if (isNaN(Number(key)))
+                    document.write("</div>")
+            }
+            else
+                document.write(o.toString().replace(/\n/g, "<br>").replace(/\s{4}/g, "- ") + "<br>")
+        }
+        document.write("<br>")
+    }
+
+    function title(key) {
+        return key[0].toUpperCase() + key.substring(1)
+    }
+</script>
+</body>
+</html>

@@ -32747,11 +32747,10 @@ var styles = {
 },{"react":257}],269:[function(require,module,exports){
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function (long) {
+if (typeof module !== 'undefined') {
+    module.exports = cv;
+}
+function cv(long) {
     long = long || null; // if long == true, give the long version of the cv.
 
     return {
@@ -32770,7 +32769,7 @@ exports.default = function (long) {
             MCP: "11821392"
         },
         highlights: ["javascript", "JavaScript", "node.js", "Node.js", "c#", "C#", "java", "Java", "python", "Python", "tdd", "unit testing", "test automation", "Full Stack Development", "Test/Build/Release Automation", "rest", "REST web services", "gulp", "gruntjs", "high performance", "SQL Server", "SQL", "sql"],
-        statement: ["Over 10 years of success driving full lifecycle development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.", "- Proven JavaScript, C#, and SQL expert with ‘multi-hat’ qualifications and advanced skills honed in Full Stack Development, Relational Database Design, Object Oriented Programming, Testing, and Automation.", "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable high performance enterprise solutions that yield measurable results in efficiency, productivity, and bottom line profits.", "- Excel at driving on time, within budget delivery of software projects from conception to successful conclusion in fast-paced, deadline-driven environments.", "- Respected as an energetic and motivational leader with talent for mentoring and coaching teams to new levels of performance.", "- Technologically savvy professional who thrives on challenges, rapidly adapts to new environments, and remains abreast of new and emerging technologies, and best practices."].filter(function (x) {
+        statement: ["Over 10 years of success in full stack development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.", "- Proven JavaScript, C#, and SQL expert with ‘multi-hat’ qualifications and advanced skills honed in Full Stack Development, Relational Database Design, Object Oriented Programming, Testing, and Automation.", "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable high performance enterprise solutions that yield measurable results in efficiency, productivity, and bottom line profits.", "- Excel at driving on time, within budget delivery of software projects from conception to successful conclusion in fast-paced, deadline-driven environments.", "- Respected as an energetic and motivational leader with talent for mentoring and coaching teams to new levels of performance.", "- Technologically savvy professional who thrives on challenges, rapidly adapts to new environments, and remains abreast of new and emerging technologies, and best practices."].filter(function (x) {
             return x;
         }).join(" \n"),
         skills: ["Web Application Development", "Full Stack Development", "Software/Systems Engineering", "Software Architecture", "Relational Database Design", "Software Testing & Integration", "Development Lifecycle", "Agile/Scrum Methodology", "Requirements Gathering/Analysis", "Enterprise/Solutions Architecture", "Front-/Back-End Development", "High Performance Coding", "Object Oriented Programming", "Cloud Integration", "Debugging, Defect Tracking", "Test Automation"],
@@ -32836,8 +32835,6 @@ exports.default = function (long) {
         }]
     };
 };
-
-;
 
 },{}],270:[function(require,module,exports){
 'use strict';

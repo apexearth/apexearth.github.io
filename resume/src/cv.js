@@ -1,4 +1,7 @@
-export default function (long) {
+if(typeof module !== 'undefined') {
+    module.exports = cv
+}
+function cv(long) {
     long = long || null; // if long == true, give the long version of the cv.
 
     return {
@@ -29,7 +32,7 @@ export default function (long) {
             "SQL Server", "SQL", "sql",
         ],
         statement:    [
-                          "Over 10 years of success driving full lifecycle development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.",
+                          "Over 10 years of success in full stack development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.",
                           "- Proven JavaScript, C#, and SQL expert with ‘multi-hat’ qualifications and advanced skills honed in Full Stack Development, Relational Database Design, Object Oriented Programming, Testing, and Automation.",
                           "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable high performance enterprise solutions that yield measurable results in efficiency, productivity, and bottom line profits.",
                           "- Excel at driving on time, within budget delivery of software projects from conception to successful conclusion in fast-paced, deadline-driven environments.",
