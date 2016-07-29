@@ -131,7 +131,7 @@ export default function (long) {
                         ],
                         statement:   [
                                          "Lead and execute advanced design, development, programming, and implementation of high performance software and web applications to meet evolving business and data management needs.",
-                                         "Analyze and document complex requirements and processes, collaborating with executives, department heads, and stakeholders to ensure alignment with software configuration and enhancements.",
+                                         "Analyze and document complex requirements and processes, collaborating with executives, department heads, and stakeholders to ensure proper alignment.",
                                          "Plan and coordinate all phases of the development life-cycle, directly supervising team members from initial gathering of requirements through deployment and maintenance."
                                      ].filter(x=>x).join(" \n"),
                         description: [
