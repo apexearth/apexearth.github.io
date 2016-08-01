@@ -6,7 +6,6 @@ function binarySearch(array, key) {
 
     while (high >= low) {
         var middle = Math.floor((low + high) / 2)
-        console.log(middle + " = " + key + " ?")
         var value = array[middle]
         if (value === key) return true
         if (value < key) low = middle + 1
