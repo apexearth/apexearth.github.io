@@ -66,6 +66,7 @@ function cv(long) {
             "rest",
             "reactjs",
             "angularjs",
+            "mongodb",
             "tdd", "unit testing", "test automation",
             "jasmine", "mocha",
             "gulp", "gruntjs",
@@ -93,7 +94,7 @@ function cv(long) {
                         location:    "San Jose, CA",
                         date:        {start: "June 2015", end: "July 2016"},
                         tags:        [
-                            "javascript", "sql", "c#", "python", "node.js", "mocha", "git", "reactjs", "gruntjs", "gulp",
+                            "javascript", "sql", "c#", "python", "node.js", "mocha", "git", "reactjs", "gruntjs", "gulp", "mongodb",
                             "tdd", "unit testing", "test automation", "asp.net", "entity framework", "web api", "mvc", "rest", "lua", "linux", "bash", "bootstrap"
                         ],
                         statement:   [
@@ -212,4 +213,4 @@ function cv(long) {
             date:    {start: 2002, end: 2004}
         }]
     }
-};
+}

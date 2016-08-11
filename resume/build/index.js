@@ -32773,14 +32773,14 @@ function cv(long) {
             return x;
         }).join(" \n"),
         skills: ["Web Application Development", "Full Stack Development", "Software/Systems Engineering", "Software Architecture", "Relational Database Design", "Software Testing & Integration", "Development Lifecycle", "Agile/Scrum Methodology", "Requirements Gathering/Analysis", "Enterprise/Solutions Architecture", "Front-/Back-End Development", "High Performance Coding", "Object Oriented Programming", "Cloud Integration", "Debugging, Defect Tracking", "Test Automation"],
-        technologies: ["javascript", "sql", "c#", "python", "node.js", "rest", "reactjs", "angularjs", "tdd", "unit testing", "test automation", "jasmine", "mocha", "gulp", "gruntjs", "git", "mercurial", "asp.net", "entity framework", "web api", "mvc", "lua", "html", "css", "c++", "java", "windows server", "linux", "bash", "bootstrap"],
+        technologies: ["javascript", "sql", "c#", "python", "node.js", "rest", "reactjs", "angularjs", "mongodb", "tdd", "unit testing", "test automation", "jasmine", "mocha", "gulp", "gruntjs", "git", "mercurial", "asp.net", "entity framework", "web api", "mvc", "lua", "html", "css", "c++", "java", "windows server", "linux", "bash", "bootstrap"],
         experience: [{
             companyTitle: "Toshiba America Electronics Corporation",
             positions: [{
                 title: "Software Engineering Manager",
                 location: "San Jose, CA",
                 date: { start: "June 2015", end: "July 2016" },
-                tags: ["javascript", "sql", "c#", "python", "node.js", "mocha", "git", "reactjs", "gruntjs", "gulp", "tdd", "unit testing", "test automation", "asp.net", "entity framework", "web api", "mvc", "rest", "lua", "linux", "bash", "bootstrap"],
+                tags: ["javascript", "sql", "c#", "python", "node.js", "mocha", "git", "reactjs", "gruntjs", "gulp", "mongodb", "tdd", "unit testing", "test automation", "asp.net", "entity framework", "web api", "mvc", "rest", "lua", "linux", "bash", "bootstrap"],
                 statement: ["Widely ***respected as a technical leader***, who turned a troubled software engineering team into a successful, dynamic unit.", "- Architect advanced software, systems, and networking solutions to meet manufacturing test requirements utilizing python, node.js, SQL, C#, and REST web services.", "  Fusing many different technologies together such as Python, Node.js, C#, C++, REST, React.js, SQL Server, utilizing each for their inherent advantages.", "- Communicate directly with product designers to gather enterprise level testing requirements for cutting-edge technologies.", "- A skilled, hands-on leader, responsible for the manufacturing testing of SATA & NVMe SSDs."].filter(function (x) {
                     return x;
                 }).join(" \n"),
@@ -32834,7 +32834,7 @@ function cv(long) {
             date: { start: 2002, end: 2004 }
         }]
     };
-};
+}
 
 },{}],270:[function(require,module,exports){
 'use strict';
