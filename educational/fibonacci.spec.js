@@ -14,3 +14,4 @@ describe("fibonacci.js", function () {
         fibonacci(8).should.equal(13);
     })
 })
+;
