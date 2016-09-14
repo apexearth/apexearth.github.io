@@ -32756,7 +32756,7 @@ function cv(long) {
     return {
         Header: {
             Name: "Christopher Jacobs",
-            Title: "Lead Software Engineer"
+            Title: "Full Stack Software Engineer"
         },
         Info: {
             Location: "San Jose, CA",
