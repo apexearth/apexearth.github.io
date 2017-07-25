@@ -4,6 +4,7 @@ import Header from './Header'
 import Info from './Info'
 import TagList from './TagList'
 import Experience from './Experience'
+import Projects from './Projects'
 import Education from './Education'
 import {
     Statement,
@@ -43,6 +44,10 @@ export default class Root extends React.Component {
                 <Section>
                     <SectionHeader>EXPERIENCE</SectionHeader>
                     <Experience cv={content}/>
+                </Section>
+                <Section>
+                    <SectionHeader>PROJECTS</SectionHeader>
+                    <Projects cv={content}/>
                 </Section>
                 <Section>
                     <SectionHeader>EDUCATION</SectionHeader>

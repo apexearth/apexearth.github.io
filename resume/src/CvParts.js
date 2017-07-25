@@ -17,17 +17,17 @@ export class SectionHeader extends React.Component {
     render() {
         return (
             <div style={{
-                display: "flex",
-                alignItems: "center",
-                fontSize: "15px",
-                fontWeight: "bold",
-                color: "#ee701d",
-                backgroundColor: "#efefef",
-                paddingLeft: 5,
-                paddingTop: 5,
-                paddingBottom: 2,
-                borderBottom: "solid 3px #e5e5e5",
-                marginBottom: 5,
+                display               : "flex",
+                alignItems            : "center",
+                fontSize              : "15px",
+                fontWeight            : "bold",
+                color                 : "#ee701d",
+                backgroundColor       : "#efefef",
+                paddingLeft           : 5,
+                paddingTop            : 5,
+                paddingBottom         : 2,
+                borderBottom          : "solid 3px #e5e5e5",
+                marginBottom          : 5,
                 WebkitPrintColorAdjust: "exact",
             }}>
                 <span style={{marginRight: 15}}>{this.props.children}</span>
@@ -40,11 +40,11 @@ export class Statement extends React.Component {
     render() {
         return (
             <div style={{
-                backgroundColor: "#f1f8ff",
-                marginTop: 10,
-                paddingLeft: 20,
-                paddingRight: 20,
-                border: "solid 1px #dae7f1",
+                backgroundColor       : "#f1f8ff",
+                marginTop             : 10,
+                paddingLeft           : 20,
+                paddingRight          : 20,
+                border                : "solid 1px #dae7f1",
                 WebkitPrintColorAdjust: "exact",
             }}>
                 <ReactMarkdown source={this.props.children}/>
@@ -56,8 +56,8 @@ export class Statement extends React.Component {
 export class Line extends React.Component {
     render() {
         var style = {
-            height:    0,
-            width:     "100%",
+            height   : 0,
+            width    : this.props.width || "100%",
             borderTop: (this.props.height || 1) + "px solid #ccc",
         }
         return (

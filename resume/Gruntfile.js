@@ -36,11 +36,11 @@ module.exports = function (grunt) {
         connect: {
             server: {
                 options: {
-                    port:       8000,
+                    port:       8080,
                     hostname:   '*',
                     livereload: true,
                     open:       {
-                        target: "http://localhost:8000/"
+                        target: "http://localhost:8080/"
                     }
                 }
             }

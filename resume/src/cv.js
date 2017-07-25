@@ -1,6 +1,7 @@
 if (typeof module !== 'undefined') {
     module.exports = cv
 }
+
 function cv(long) {
     long = long || null; // if long == true, give the long version of the cv.
 
@@ -19,26 +20,14 @@ function cv(long) {
             StackOverflow: "https://stackoverflow.com/cv/chris.jacobs",
             MCP          : "11821392"
         },
-        highlights  : [
-            "javascript", "JavaScript", "node.js", "Node.js",
-            "c#", "C#", "java", "Java",
-            "python", "Python",
-            "tdd", "unit testing", "test automation",
-            "Full Stack Development",
-            "Test/Build/Release Automation",
-            "rest", "REST web services",
-            "gulp", "gruntjs",
-            "high performance",
-            "SQL Server", "SQL", "sql",
-        ],
         statement   : [
             "Over 10 years of success in full stack development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.",
-            "- Proven JavaScript, C#, and SQL expert with ‘multi-hat’ qualifications and advanced skills honed in Full Stack Development, Relational Database Design, Object Oriented Programming, Testing, and Automation.",
-            "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable high performance enterprise solutions that yield measurable results in efficiency, productivity, and bottom line profits.",
+            "- Proven JavaScript, C#, and SQL expert with ‘multi-hat’ qualifications and skills in Full Stack Development, Testing, and Automation.",
+            "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable solutions that yield measurable results in efficiency and productivity.",
             "- Excel at driving on time, within budget delivery of software projects from conception to successful conclusion in fast-paced, deadline-driven environments.",
             "- Respected as an energetic and motivational leader with talent for mentoring and coaching teams to new levels of performance.",
             "- Technologically savvy professional who thrives on challenges, rapidly adapts to new environments, and remains abreast of new and emerging technologies, and best practices.",
-        ].filter(x=>x).join(" \n"),
+        ].filter(x => x).join(" \n"),
         skills      : [
             "Web Application Development",
             "Full Stack Development",
@@ -97,14 +86,20 @@ function cv(long) {
                         tags       : [
                             "javascript", "reactjs", "node.js", "webpack", "c/c++", "tools", "debugging",
                             "rest-api", "micro-services", "aws", "s3", "api-gateway", "lambda", "rds", "memcache",
-                            "git", "svn", "bamboo", "jira", "unit testing", "bootstrap", "css"
+                            "git", "svn", "bamboo", "jira", "unit testing", "bootstrap", "css", "windows", "linux", "osx"
                         ],
                         statement  : [
-                            "- ",
-                        ].filter(x=>x).join(" \n"),
+                            "Development and support of new and existing NAS and DAS devices, tools, and cloud services.",
+                        ].filter(x => x).join(" \n"),
                         description: [
-                            "",
-                        ].filter(x=>x).join(" \n")
+                            "### Notable Projects",
+                            "- Designed & developed a diagnostic analysis tool with Node.js, React, and Mocha used by engineers and support technicians to quickly identify product issues.",
+                            "- Designed & developed web services for client-app upload of diagnostics into S3 using signed policies.",
+                            "- Designed & developed internal tools to analyze diagnostics in mass and identify trends & issues.",
+                            "  - Uncovered multiple issues *early on* and quickly pinpointed root causes and devised solutions.",
+                            "- Designed & developed a reliable and scalable email service using AWS for product generated alerts and notifications.",
+                            "- Triage, debugging, and fix development of product issues for NAS, DAS, and iSCSI device firmware, as well as client dashboard software."
+                        ].filter(x => x).join(" \n")
                     }
                 ]
             },
@@ -125,7 +120,7 @@ function cv(long) {
                             "  Fusing many different technologies together such as Python, Node.js, C#, C++, REST, React.js, SQL Server, utilizing each for their inherent advantages.",
                             "- Communicate directly with product designers to gather enterprise level testing requirements for cutting-edge technologies.",
                             "- A skilled, hands-on leader, responsible for the manufacturing testing of SATA & NVMe SSDs.",
-                        ].filter(x=>x).join(" \n"),
+                        ].filter(x => x).join(" \n"),
                         description: [
                             "### Selected Achievements:",
                             "- Spearheaded design and development of enterprise test solutions for next-generation NVMe SSD products.",
@@ -141,7 +136,7 @@ function cv(long) {
                             "    - Drove initiatives to automate builds and releases wherever appropriate, increase the overall efficiency of the team.",
                             "    - Added unit-testing requirements for all written software, improving software quality and maintainability.",
                             "    - Encouraged and rewarded team-members to research, study, and adopt industry best-practices at all times.",
-                        ].filter(x=>x).join(" \n")
+                        ].filter(x => x).join(" \n")
                     }
                 ]
             },
@@ -159,7 +154,7 @@ function cv(long) {
                             "Lead and execute advanced design, development, programming, and implementation of high performance software and web applications to meet evolving business and data management needs.",
                             "Analyze and document complex requirements and processes, collaborating with executives, department heads, and stakeholders to ensure proper alignment.",
                             "Plan and coordinate all phases of the development life-cycle, directly supervising team members from initial gathering of requirements through deployment and maintenance."
-                        ].filter(x=>x).join(" \n"),
+                        ].filter(x => x).join(" \n"),
                         description: [
                             "### Selected Achievements:",
                             "- Credited with successfully completing numerous web/software development projects that triggered immediate and measurable improvements in efficiency, productivity, and cost savings through automation and streamlining of core business processes and data management/reporting/analysis functions.",
@@ -180,7 +175,7 @@ function cv(long) {
                             "- Key contributor to planning and seamless transition of Taiwan factory operations, systems, and processes to new ownership with zero unplanned down-times.",
                             long && "- Championed and won approval to develop and implement Master Data System to increase data quality and improve ETL capabilities. Successfully completed project as part of larger, enterprise-wide initiative to increase awareness of the importance of data best practices across all departments and levels.",
                             long && "- Engineered applications to automate product label printing and streamline packaging process, leading to ~95% reduction in print errors and ~15% increase in efficiency.",
-                        ].filter(x=>x).join(" \n")
+                        ].filter(x => x).join(" \n")
                     }
                 ]
             },
@@ -196,7 +191,7 @@ function cv(long) {
                         ],
                         statement  : [
                             "Initially hired as Software Developer; assumed additional responsibilities of System Administrator, effectively fulfilling dual roles for nearly 2 years to accommodate challenging business needs during period of rapid corporate growth and expansion."
-                        ].filter(x=>x).join(" \n"),
+                        ].filter(x => x).join(" \n"),
                         description: [
                             "### Notable Projects:",
                             "- Led development, launch, and maintenance of web application for documentation and tracking of product repair actions and results. Teamed with BI Analysts to create SQL queries for repair data analysis.",
@@ -207,7 +202,7 @@ function cv(long) {
                             long && "- Leveraged deep understanding and earlier hands-on experience in Windows Server maintenance and networking best practices to intuitively tailor software development and deployment plans that consistently produce highest possible levels of performance, compatibility, and functionality.",
                             long && "- Designed and developed customized client-server reporting system generating dozens of reports vital to core business functions company-wide.",
                             long && "- Developed and maintained a suite of many ERP-integrated applications supporting global operations, increasing the efficiency of day-to-day actions in all facets of the company."
-                        ].filter(x=>x).join(" \n")
+                        ].filter(x => x).join(" \n")
                     }
                 ]
             },
@@ -225,10 +220,21 @@ function cv(long) {
                             long && "- Setup & administration of Windows 2003 Servers, DNS, DHCP, SQL Server, Networking and Telephony.",
                             long && "- Wrote web reports to view real-time statistics  using SQL Server and C#.\n",
                             long && "Note: Also ran email marketing where I designed many ads in Photoshop which were reviewed and approved by the CEO."
-                        ].filter(x=>x).join(" \n")
+                        ].filter(x => x).join(" \n")
                     }
                 ]
             },
+        ],
+        projects    : [
+            {
+                title      : "Particle Sandbox",
+                description: [
+                    "Grand-scale interactive gravity simulator created using Node.js, Pixi.js, React, Less, and Mocha.",
+                    "Designed for desktop and mobile devices."
+                ].join('  \n'),
+                url        : "http://particlesandbox.com",
+                github     : "https://github.com/apexearth/particle-sandbox"
+            }
         ],
         education   : [{
             name   : "Tunxis Community College",

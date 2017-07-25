@@ -32057,7 +32057,7 @@ var Line = exports.Line = function (_React$Component4) {
         value: function render() {
             var style = {
                 height: 0,
-                width: "100%",
+                width: this.props.width || "100%",
                 borderTop: (this.props.height || 1) + "px solid #ccc"
             };
             return _react2.default.createElement(
@@ -32161,7 +32161,7 @@ function createEducation(school) {
     );
 }
 
-},{"./CvParts":262,"./TagList":268,"react":257,"react-markdown":77}],264:[function(require,module,exports){
+},{"./CvParts":262,"./TagList":269,"react":257,"react-markdown":77}],264:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32223,6 +32223,7 @@ exports.default = Experience;
 var companyIndex = 0;
 var positionIndex = 0;
 function createCompany(company) {
+    if (company.visible === false) return null;
     var style = {
         textAlign: "justify"
     };
@@ -32319,7 +32320,7 @@ var styles = exports.styles = {
     }
 };
 
-},{"./CvParts":262,"./TagList":268,"react":257,"react-markdown":77}],265:[function(require,module,exports){
+},{"./CvParts":262,"./TagList":269,"react":257,"react-markdown":77}],265:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32513,6 +32514,117 @@ function iconStyle(imageUrl, size) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.styles = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactMarkdown = require('react-markdown');
+
+var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
+
+var _TagList = require('./TagList');
+
+var _TagList2 = _interopRequireDefault(_TagList);
+
+var _CvParts = require('./CvParts');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Projects = function (_React$Component) {
+    _inherits(Projects, _React$Component);
+
+    function Projects() {
+        _classCallCheck(this, Projects);
+
+        return _possibleConstructorReturn(this, Object.getPrototypeOf(Projects).apply(this, arguments));
+    }
+
+    _createClass(Projects, [{
+        key: 'render',
+        value: function render() {
+            var projects = this.props.cv.projects.map(createProject);
+            return _react2.default.createElement(
+                'div',
+                { style: { marginTop: 10 } },
+                projects
+            );
+        }
+    }]);
+
+    return Projects;
+}(_react2.default.Component);
+
+exports.default = Projects;
+
+
+var projectIndex = 0;
+
+function createProject(project) {
+    if (project.visible === false) return null;
+    var style = {
+        textAlign: "justify",
+        display: "flex",
+        alignItems: "center",
+        whiteSpace: "nowrap"
+    };
+    return _react2.default.createElement(
+        'div',
+        { key: projectIndex++ },
+        _react2.default.createElement(
+            'div',
+            { style: style },
+            _react2.default.createElement(
+                'span',
+                { style: styles.projectTitle },
+                project.title
+            ),
+            _react2.default.createElement(_CvParts.Line, { height: '2', width: '100px' }),
+            _react2.default.createElement(Link, { url: project.url }),
+            _react2.default.createElement(_CvParts.Line, { height: '2', width: '100px' }),
+            _react2.default.createElement(Link, { url: project.github }),
+            _react2.default.createElement(_CvParts.Line, { height: '2' })
+        ),
+        _react2.default.createElement(
+            'div',
+            { style: { pageBreakInside: "avoid" } },
+            _react2.default.createElement(_reactMarkdown2.default, { source: project.description })
+        )
+    );
+}
+
+function Link(_ref) {
+    var url = _ref.url;
+
+    return _react2.default.createElement(
+        'a',
+        { href: url, target: '_BLANK', style: { paddingLeft: '10px', paddingRight: '10px' } },
+        url
+    );
+}
+
+var styles = exports.styles = {
+    projectTitle: {
+        display: "inline-block",
+        fontSize: "18px", whiteSpace: "nowrap", fontWeight: "bold", marginRight: 15
+    }
+};
+
+},{"./CvParts":262,"./TagList":269,"react":257,"react-markdown":77}],268:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -32539,6 +32651,10 @@ var _TagList2 = _interopRequireDefault(_TagList);
 var _Experience = require('./Experience');
 
 var _Experience2 = _interopRequireDefault(_Experience);
+
+var _Projects = require('./Projects');
+
+var _Projects2 = _interopRequireDefault(_Projects);
 
 var _Education = require('./Education');
 
@@ -32636,6 +32752,16 @@ var Root = function (_React$Component) {
                     _react2.default.createElement(
                         _CvParts.SectionHeader,
                         null,
+                        'PROJECTS'
+                    ),
+                    _react2.default.createElement(_Projects2.default, { cv: content })
+                ),
+                _react2.default.createElement(
+                    _CvParts.Section,
+                    null,
+                    _react2.default.createElement(
+                        _CvParts.SectionHeader,
+                        null,
                         'EDUCATION'
                     ),
                     _react2.default.createElement(_Education2.default, { cv: content })
@@ -32664,7 +32790,7 @@ var rootStyle = {
     fontFamily: ["Arial", "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", "Helvetica", "Lucida Grande", "sans-serif"]
 };
 
-},{"./CvParts":262,"./Education":263,"./Experience":264,"./Header":265,"./Info":266,"./TagList":268,"./cv.js":269,"react":257}],268:[function(require,module,exports){
+},{"./CvParts":262,"./Education":263,"./Experience":264,"./Header":265,"./Info":266,"./Projects":267,"./TagList":269,"./cv.js":270,"react":257}],269:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32744,12 +32870,13 @@ var styles = {
     }
 };
 
-},{"react":257}],269:[function(require,module,exports){
+},{"react":257}],270:[function(require,module,exports){
 "use strict";
 
 if (typeof module !== 'undefined') {
     module.exports = cv;
 }
+
 function cv(long) {
     long = long || null; // if long == true, give the long version of the cv.
 
@@ -32768,13 +32895,26 @@ function cv(long) {
             StackOverflow: "https://stackoverflow.com/cv/chris.jacobs",
             MCP: "11821392"
         },
-        highlights: ["javascript", "JavaScript", "node.js", "Node.js", "c#", "C#", "java", "Java", "python", "Python", "tdd", "unit testing", "test automation", "Full Stack Development", "Test/Build/Release Automation", "rest", "REST web services", "gulp", "gruntjs", "high performance", "SQL Server", "SQL", "sql"],
-        statement: ["Over 10 years of success in full stack development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.", "- Proven JavaScript, C#, and SQL expert with ‘multi-hat’ qualifications and advanced skills honed in Full Stack Development, Relational Database Design, Object Oriented Programming, Testing, and Automation.", "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable high performance enterprise solutions that yield measurable results in efficiency, productivity, and bottom line profits.", "- Excel at driving on time, within budget delivery of software projects from conception to successful conclusion in fast-paced, deadline-driven environments.", "- Respected as an energetic and motivational leader with talent for mentoring and coaching teams to new levels of performance.", "- Technologically savvy professional who thrives on challenges, rapidly adapts to new environments, and remains abreast of new and emerging technologies, and best practices."].filter(function (x) {
+        statement: ["Over 10 years of success in full stack development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.", "- Proven JavaScript, C#, and SQL expert with ‘multi-hat’ qualifications and skills in Full Stack Development, Testing, and Automation.", "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable solutions that yield measurable results in efficiency and productivity.", "- Excel at driving on time, within budget delivery of software projects from conception to successful conclusion in fast-paced, deadline-driven environments.", "- Respected as an energetic and motivational leader with talent for mentoring and coaching teams to new levels of performance.", "- Technologically savvy professional who thrives on challenges, rapidly adapts to new environments, and remains abreast of new and emerging technologies, and best practices."].filter(function (x) {
             return x;
         }).join(" \n"),
-        skills: ["Web Application Development", "Full Stack Development", "Software/Systems Engineering", "Software Architecture", "Relational Database Design", "Software Testing & Integration", "Development Lifecycle", "Agile/Scrum Methodology", "Requirements Gathering/Analysis", "Enterprise/Solutions Architecture", "Front-/Back-End Development", "High Performance Coding", "Object Oriented Programming", "Cloud Integration", "Debugging, Defect Tracking", "Test Automation"],
-        technologies: ["javascript", "sql", "c#", "python", "node.js", "rest", "reactjs", "angularjs", "mongodb", "tdd", "unit testing", "test automation", "jasmine", "mocha", "gulp", "gruntjs", "git", "mercurial", "asp.net", "entity framework", "web api", "mvc", "lua", "html", "css", "c++", "java", "windows server", "linux", "bash", "bootstrap"],
+        skills: ["Web Application Development", "Full Stack Development", "Software/Systems Engineering", "Software Architecture", "Relational Database Design", "Software Testing & Integration", "Test Automation", "Development Lifecycle", "Agile/Scrum Methodology", "Requirements Gathering/Analysis", "Enterprise/Solutions Architecture", "Front-/Back-End Development", "High Performance Coding", "Object Oriented Programming", "Cloud Integration", "Debugging, Defect Tracking"],
+        technologies: ["javascript", "node.js", "reactjs", "mocha", "sql", "c#", "python", "rest", "angularjs", "mongodb", "tdd", "unit testing", "test automation", "jasmine", "gulp", "gruntjs", "git", "mercurial", "asp.net", "entity framework", "web api", "mvc", "lua", "html", "css", "c++", "java", "windows", "linux", "linux", "bash", "bootstrap"],
         experience: [{
+            companyTitle: "Drobo (Data Robotics)",
+            positions: [{
+                title: "Senior Software Engineer",
+                location: "San Jose, CA",
+                date: { start: "October 2016", end: "present" },
+                tags: ["javascript", "reactjs", "node.js", "webpack", "c/c++", "tools", "debugging", "rest-api", "micro-services", "aws", "s3", "api-gateway", "lambda", "rds", "memcache", "git", "svn", "bamboo", "jira", "unit testing", "bootstrap", "css", "windows", "linux", "osx"],
+                statement: ["Development and support of new and existing NAS and DAS devices, tools, and cloud services."].filter(function (x) {
+                    return x;
+                }).join(" \n"),
+                description: ["### Notable Projects", "- Designed & developed a diagnostic analysis tool with Node.js, React, and Mocha used by engineers and support technicians to quickly identify product issues.", "- Designed & developed web services for client-app upload of diagnostics into S3 using signed policies.", "- Designed & developed internal tools to analyze diagnostics in mass and identify trends & issues.", "  - Uncovered multiple issues *early on* and quickly pinpointed root causes and devised solutions.", "- Designed & developed a reliable and scalable email service using AWS for product generated alerts and notifications.", "- Triage, debugging, and fix development of product issues for NAS, DAS, and iSCSI device firmware, as well as client dashboard software."].filter(function (x) {
+                    return x;
+                }).join(" \n")
+            }]
+        }, {
             companyTitle: "Toshiba America Electronics Corporation",
             positions: [{
                 title: "Software Engineering Manager",
@@ -32817,6 +32957,7 @@ function cv(long) {
                 }).join(" \n")
             }]
         }, {
+            visible: false, // Too old, not worth displaying.
             companyTitle: "American Auto Auction",
             positions: [{
                 title: "IT Systems Administrator",
@@ -32828,6 +32969,12 @@ function cv(long) {
                 }).join(" \n")
             }]
         }],
+        projects: [{
+            title: "Particle Sandbox",
+            description: ["Grand-scale interactive gravity simulator created using Node.js, Pixi.js, React, Less, and Mocha.", "Designed for desktop and mobile devices."].join('  \n'),
+            url: "http://particlesandbox.com",
+            github: "https://github.com/apexearth/particle-sandbox"
+        }],
         education: [{
             name: "Tunxis Community College",
             studies: "Computer science studies focusing in software engineering.",
@@ -32836,7 +32983,7 @@ function cv(long) {
     };
 }
 
-},{}],270:[function(require,module,exports){
+},{}],271:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -32853,10 +33000,6 @@ var _Root = require('./Root.js');
 
 var _Root2 = _interopRequireDefault(_Root);
 
-var _cv = require('./cv');
-
-var _cv2 = _interopRequireDefault(_cv);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(
@@ -32866,10 +33009,4 @@ _reactDom2.default.render(_react2.default.createElement(
     _react2.default.createElement(_reactRouter.Route, { path: '/resume/', component: _Root2.default })
 ), document.getElementById("root"));
 
-if (_cv2.default.highlights && _cv2.default.highlights.length) {
-    for (var i = 0; i < _cv2.default.highlights.length; i++) {
-        document.body.innerHTML = document.body.innerHTML.replace(new RegExp(_cv2.default.highlights[i], "g"), "<span style='" + "font-weight: bold; " + "display: inline-block; " + "background-color: rgb(245,255,235); " + "padding: 2px; " + "margin: -2px; " + "-webkit-print-color-adjust: exact;" + "'>" + _cv2.default.highlights[i] + "</span>");
-    }
-}
-
-},{"./Root.js":267,"./cv":269,"react":257,"react-dom":76,"react-router":107}]},{},[270]);
+},{"./Root.js":268,"react":257,"react-dom":76,"react-router":107}]},{},[271]);
