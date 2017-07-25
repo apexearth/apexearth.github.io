@@ -17,6 +17,7 @@ export default class Experience extends React.Component {
 var companyIndex  = 0
 var positionIndex = 0
 function createCompany(company) {
+    if (company.visible === false) return null
     var style = {
         textAlign: "justify",
     }
@@ -75,12 +76,12 @@ export var styles = {
     positionTitle: {
         fontSize: "18px", whiteSpace: "nowrap", fontWeight: "bold", marginRight: 15
     },
-    companyTitle:  {
+    companyTitle : {
         fontSize: "18px", color: "#6a737c", fontWeight: "normal"
     },
-    container:     {
-        display:        "flex",
-        alignItems:     "center",
+    container    : {
+        display       : "flex",
+        alignItems    : "center",
         justifyContent: "space-between"
     }
 }
