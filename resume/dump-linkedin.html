@@ -28,19 +28,22 @@
     document.write("</pre>")
 
     function dump(obj) {
+        if (typeof obj === "object" && obj.length > 0) {
+            var itemize = true
+        }
         for (var key in obj) {
             if (!obj.hasOwnProperty(key)) continue
             if (["highlights"].indexOf(key) > -1) continue
             var o = obj[key]
             if (typeof o === "object") {
-                if (isNaN(Number(key)))
-                    document.write(title(key) + ":<div style='margin-left: 15px'>")
-                dump(o)
-                if (isNaN(Number(key)))
+                if (!itemize)
+                    document.write("<br>" + title(key) + ":<div>")
+                dump(o, true)
+                if (!itemize)
                     document.write("</div>")
             }
             else
-                document.write(o.toString().replace(/\n/g, "<br>").replace(/\s{4}/g, "- ") + "<br>")
+                document.write((itemize ? " ▪ " : "") + o.toString().replace(/\n/g, "<br>").replace(/\s{4}/g, " ▪ ").replace(/- /g, " ▪ ") + "<br>")
         }
         document.write("<br>")
     }
