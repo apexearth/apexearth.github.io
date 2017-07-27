@@ -22,7 +22,7 @@ function cv(long) {
         },
         statement   : [
             "Over 10 years of success in full stack development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.",
-            "- Proven JavaScript, C#, and SQL expert with ‘multi-hat’ qualifications and skills in Full Stack Development, Testing, and Automation.",
+            "- Proven JavaScript expert with ‘multi-hat’ qualifications and skills in Full Stack Development, Testing, and Automation.",
             "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable solutions that yield measurable results in efficiency and productivity.",
             "- Excel at driving on time, within budget delivery of software projects from conception to successful conclusion in fast-paced, deadline-driven environments.",
             "- Respected as an energetic and motivational leader with talent for mentoring and coaching teams to new levels of performance.",
