@@ -53,7 +53,7 @@ function createPosition(company, position) {
             </div>
 
     var description =
-            <div style={{pageBreakInside: "avoid"}}>
+            <div>
                 <ReactMarkdown source={position.description}/>
             </div>
 

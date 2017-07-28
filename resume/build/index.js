@@ -32285,7 +32285,7 @@ function createPosition(company, position) {
 
     var description = _react2.default.createElement(
         'div',
-        { style: { pageBreakInside: "avoid" } },
+        null,
         _react2.default.createElement(_reactMarkdown2.default, { source: position.description })
     );
 
