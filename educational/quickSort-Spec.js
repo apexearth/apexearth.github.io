@@ -1,38 +1,21 @@
 require('should')
-var quickSort = require('./quickSort.js')
+const qs = require('./quickSort.js')
 
 describe("quickSort.js", function () {
-    it("returns the correct responses", function () {
-        console.time("\nquickSort.js -> returns the correct responses")
-        var array = [
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 423, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8548, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4,
-            45, 3, 66, 686, 23, 346, 342, 8568, 4523, 2, 4343, 4
-        ]
-        var array2 = quickSort(array)
-        var array3 = array.sort((a, b) => a - b)
+    it("lomuto sorts!", test(qs.lomuto))
+    it("hoare sorts!", test(qs.hoare))
 
-        array2.length.should.equal(array3.length)
-        for (var i = 0; i < array3.length; i++) {
-            array3[i].should.equal(array2[i])
+    function test(sort) {
+        return function () {
+            console.time(this.test.fullTitle())
+            const count = 10000
+            const array = []
+            for (let i = 0; i < count; i++) array[i] = Math.random() * (i % 3)
+            sort(array)
+
+            array.length.should.equal(count)
+            for (let i = 0; i < count - 1; i++) array[i].should.be.lessThanOrEqual(array[i + 1])
+            console.timeEnd(this.test.fullTitle())
         }
-        console.timeEnd("\nquickSort.js -> returns the correct responses")
-    })
+    }
 })
