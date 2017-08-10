@@ -32,7 +32,7 @@ describe('rxjs', function () {
         expect(result).to.deep.equal([0, 1, 2, 3, 4])
     })
 
-    it('Observable.from.takeUntil', function (done) {
+    it('Observable.interval.takeUntil', function (done) {
         let source = Observable.interval(10)
         let five   = source.filter(value => value > 4)
 
@@ -84,6 +84,19 @@ describe('rxjs', function () {
         setImmediate(() => {
             expect(result).to.deep.equal([])
         })
+    })
+
+    it('Observable.from.filter with error', function () {
+        Observable.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+                  .filter(value => {
+                      if (value === 3) throw new Error(value)
+                      return true
+                  })
+                  .subscribe(
+                      addToResult,
+                      e => addToResult(e.toString())
+                  )
+        expect(result).to.deep.equal([0, 1, 2, 'Error: 3'])
     })
 
 })
