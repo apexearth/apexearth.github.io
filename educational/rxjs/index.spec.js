@@ -99,4 +99,35 @@ describe('rxjs', function () {
         expect(result).to.deep.equal([0, 1, 2, 'Error: 3'])
     })
 
+    it('Observable.fromPromise resolve', function (done) {
+        Observable.from(new Promise((resolve, reject) => {
+            setImmediate(() => resolve('hamburger!'))
+            setImmediate(resolve)
+        }))
+                  .subscribe(
+                      addToResult,
+                      addToResult,
+                      () => {
+                          expect(result).to.deep.equal(['hamburger!'])
+                          done()
+                      }
+                  )
+    })
+
+    it('Observable.fromPromise reject', function (done) {
+        Observable.from(new Promise((resolve, reject) => {
+            setImmediate(() => reject('potatoes!'))
+        }))
+                  .subscribe(
+                      addToResult,
+                      e => {
+                          expect(e).to.equal('potatoes!')
+                          done()
+                      },
+                      () => {
+                          throw new Error('Ahh!')
+                      }
+                  )
+    })
+
 })
