@@ -130,4 +130,55 @@ describe('rxjs', function () {
                   )
     })
 
+    it('Observable.from.map', function () {
+        Observable.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+                  .map(value => value * 2)
+                  .subscribe(addToResult)
+        expect(result).to.deep.equal([0, 2, 4, 6, 8, 10, 12, 14, 16, 18])
+    })
+
+    it('Observable.from.map.reduce', function () {
+        Observable.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+                  .map(value => value * 2)
+                  .reduce((acc, curr) => acc += curr)
+                  .subscribe(addToResult)
+        expect(result).to.deep.equal([90])
+    })
+
+    it('Observable.from.mergeMap (flatMap)', function () {
+        Observable.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+                  .mergeMap(val => Observable.range(0, val + 1))
+                  .subscribe(addToResult)
+        expect(result).to.deep.equal([
+            0,
+            0, 1,
+            0, 1, 2,
+            0, 1, 2, 3,
+            0, 1, 2, 3, 4,
+            0, 1, 2, 3, 4, 5,
+            0, 1, 2, 3, 4, 5, 6,
+            0, 1, 2, 3, 4, 5, 6, 7,
+            0, 1, 2, 3, 4, 5, 6, 7, 8,
+            0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+        ])
+    })
+
+    it('Observable.from.concatMap', function () {
+        Observable.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+                  .concatMap(val => Observable.range(0, val + 1))
+                  .subscribe(addToResult)
+        expect(result).to.deep.equal([
+            0,
+            0, 1,
+            0, 1, 2,
+            0, 1, 2, 3,
+            0, 1, 2, 3, 4,
+            0, 1, 2, 3, 4, 5,
+            0, 1, 2, 3, 4, 5, 6,
+            0, 1, 2, 3, 4, 5, 6, 7,
+            0, 1, 2, 3, 4, 5, 6, 7, 8,
+            0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+        ])
+    })
+
 })
