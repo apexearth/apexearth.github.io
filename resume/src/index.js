@@ -7,5 +7,6 @@ ReactDOM.render((
     <Router history={browserHistory}>
         <Route path='/' component={Root} />
         <Route path='/resume/' component={Root} />
+        <Route path='/apexearth.github.io/resume/' component={Root} />
     </Router>
 ), document.getElementById("root"));

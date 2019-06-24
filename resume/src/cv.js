@@ -13,7 +13,6 @@ function cv(long) {
         Info        : {
             Location     : "San Jose, CA",
             Email        : "apexearth@gmail.com",
-            Phone        : "(860) 301-4287",
             CV           : "https://apexearth.github.io/resume",
             LinkedIn     : "https://www.linkedin.com/in/apexearth",
             GitHub       : "https://github.com/apexearth",
@@ -21,7 +20,7 @@ function cv(long) {
             MCP          : "11821392"
         },
         statement   : [
-            "Over 10 years of success in full stack development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.",
+            "Over 13 years of success in full stack development, enhancement, and implementation of state-of-the-art software and web applications to meet global business demands.",
             "- Proven JavaScript expert with ‘multi-hat’ qualifications and skills in Full Stack Development, Testing, and Automation.",
             "- Successful in partnering with stakeholders, managers, vendors and teams to define and translate business requirements into reliable solutions that yield measurable results in efficiency and productivity.",
             "- Excel at driving on time, within budget delivery of software projects from conception to successful conclusion in fast-paced, deadline-driven environments.",
@@ -29,60 +28,55 @@ function cv(long) {
             "- Technologically savvy professional who thrives on challenges, rapidly adapts to new environments, and remains abreast of new and emerging technologies, and best practices.",
         ].filter(x => x).join(" \n"),
         skills      : [
-            "Web Application Development",
-            "Full Stack Development",
-            "Software/Systems Engineering",
+            "Full Stack Web Development",
             "Software Architecture",
             "Relational Database Design",
-            "Software Testing & Integration",
-            "Test Automation",
-            "Unit Testing",
+            "Testing & Integration",
+            "Automation",
+            "New Product Introduction",
             "Development Lifecycle",
-            "Agile/Scrum Methodology",
-            "Requirements Gathering/Analysis",
-            "Enterprise/Solutions Architecture",
-            "Front-/Back-End Development",
-            "High Performance Coding",
-            "Object Oriented Programming",
+            "Requirements Gathering & Analysis",
             "Cloud Integration",
             "Debugging, Defect Tracking"
         ],
         technologies: [
             "javascript",
             "node.js",
-            "reactjs",
+            "react",
+            "angular",
             "mocha",
+            "electron",
             "webpack",
             "git",
+            "sass",
             "html",
-            "less",
             "css",
-            "sql",
-            "c#",
-            "python",
             "rest",
-            "angularjs",
-            "mongodb",
-            "gulp", "gruntjs",
-            "jasmine",
-            "mvc",
-            "lua",
-            "c/c++",
-            "java",
+            "sql", "nosql",
             "windows", "osx", "linux",
-            "bash",
-            "bootstrap"
         ],
         experience  : [
             {
-                companyTitle: "Drobo (Data Robotics)",
+                companyTitle: "Drobo (StorCentric)",
                 positions   : [
+                    {
+                        title    : "Host / UI Architect",
+                        location : "San Jose, CA",
+                        date     : {start: "June 2019", end: "present"},
+                        tags     : [
+                            "javascript", "node.js", "react", "angular", "electron", "webpack", "sass", "css", "html", "c/c++",
+                            "rest-api", "git", "bamboo", "jira", "unit testing", "windows", "linux", "osx"
+                        ],
+                        statement: [
+                            "Development and support of new and existing NAS, DAS, and SAN UI applications.",
+                        ].filter(x => x).join(" \n"),
+                    },
                     {
                         title      : "Senior Software Engineer",
                         location   : "San Jose, CA",
-                        date       : {start: "October 2016", end: "present"},
+                        date       : {start: "October 2016", end: "June 2019"},
                         tags       : [
-                            "javascript", "reactjs", "node.js", "webpack", "c/c++", "tools", "debugging",
+                            "javascript", "node.js", "react", "angular", "electron", "webpack", "c/c++", "golang", "tools", "debugging",
                             "rest-api", "micro-services", "aws", "s3", "api-gateway", "lambda", "rds", "memcache",
                             "git", "svn", "bamboo", "jira", "unit testing", "bootstrap", "css", "windows", "linux", "osx"
                         ],
@@ -102,7 +96,7 @@ function cv(long) {
                 ]
             },
             {
-                companyTitle: "Toshiba America Electronics Corporation",
+                companyTitle: "Toshiba America Electronics Corporation (OCZ)",
                 positions   : [
                     {
                         title      : "Software Engineering Manager",
